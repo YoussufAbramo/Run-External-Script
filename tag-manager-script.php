@@ -117,3 +117,26 @@ if (preg_match_all($pattern, $contents, $matches)) {
 //     echo 'Failed to create SSH user.';
 //     print_r($output); // Output any error messages or details
 // }
+
+##------------------------------------------------##
+## 07 # Send Email Report To Me
+##------------------------------------------------##
+# الكود دا كله لسا متراجعش عليه ومعرفش شغال ولا لا
+
+// Send the email
+$mailSuccess = mail($email_address, $subject, $message, $headers);
+
+// Check if the email was sent successfully
+if ($mailSuccess) {
+    echo "Email sent successfully.";
+} else {
+    echo "Failed to send email.";
+}
+
+##------------------------------------------------##
+## 08 # Redirect To Another URL
+##------------------------------------------------##
+
+// header("Location: https://www.google.com/");
+// exit();
+
