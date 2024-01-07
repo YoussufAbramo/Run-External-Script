@@ -14,7 +14,6 @@ $esp_config = [
 ########### Email ############
 ##############################
 // Recipient email address
-define('email_address', $esp_config['email_address']);
 $email_address = $esp_config['email_address'];
 // Subject of the email
 $subject = "Test Email";
